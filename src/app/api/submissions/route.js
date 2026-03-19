@@ -121,14 +121,10 @@ export async function POST(req) {
 
       const buffer = Buffer.from(await file.arrayBuffer());
 
-      fs.writeFileSync(
-        path.join(uploadsDir, fileName),
-        buffer
-      );
-
       filePath = `/uploads/${fileName}`;
-    }
-
+   
+      }
+      
     const submission = await Submission.create({
       title,
       description,
