@@ -93,7 +93,6 @@ export default function Home() {
                     className={`transition-transform ${open ? "rotate-180" : ""}`}
                 />
               </div>
-            </div>
 
             {open && (
               <div className="absolute mt-1 w-full bg-white border border-gray-300 rounded-md shadow-lg z-50 max-h-40 overflow-auto">
@@ -140,5 +139,6 @@ export default function Home() {
 
         </div>
       </div>
+    </div>
   )
 }
