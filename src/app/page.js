@@ -78,19 +78,21 @@ export default function Home() {
           </div>
 
           {/* Dropdown */}
-          <div
-                onClick={() => setOpen(!open)}
-                className="w-full bg-white border border-gray-400 rounded-md p-3 flex justify-between items-center cursor-pointer hover:border-blue-500 focus:ring-2 focus:ring-blue-400 transition shadow-sm"
-          >
-            <label className="block mb-2 text-sm font-medium text-gray-700">Department</label>
+          <div className="mb-4 relative" ref={dropdownRef}>
+            <label className="block mb-2 text-sm font-medium text-gray-700">
+              Department
+            </label>
             <div
-              onClick={() => setOpen(!open)}
-              className="w-full bg-white border border-gray-300 rounded-md p-3 flex justify-between items-center cursor-pointer hover:border-blue-500 transition"
-            >
-              <span className={`${selected ? "text-gray-900" : "text-gray-400"}`}>
+                onClick={() => setOpen(!open)}
+                className="w-full bg-white border border-gray-400 rounded-md p-3 flex justify-between items-center cursor-pointer hover:border-blue-500 focus:ring-2 focus:ring-blue-400 transition shadow-sm hover:shadow-md"
+              >
+                <span className={`${selected ? "text-gray-900" : "text-gray-500"}`}>
                   {selected || "Choose Department"}
                 </span>
-              <FaChevronDown className={`transition-transform ${open ? "rotate-180" : ""}`} />
+              <FaChevronDown
+                    className={`transition-transform ${open ? "rotate-180" : ""}`}
+                />
+              </div>
             </div>
 
             {open && (
@@ -138,7 +140,5 @@ export default function Home() {
 
         </div>
       </div>
-
-    </div>
   )
 }
