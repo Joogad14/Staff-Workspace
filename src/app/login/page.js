@@ -130,7 +130,7 @@ function LoginContent() {
             type="email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
-            className="w-full border border-gray-500 p-3 placeholder-gray-600 rounded-md outline-none focus:ring-2 focus:ring-blue-500"
+            className="w-full border border-gray-500 p-3 text-gray-900 placeholder-gray-500 bg-white rounded-md outline-none focus:ring-2 focus:ring-blue-500"
             placeholder="Enter your email"
           />
         </div>
@@ -141,7 +141,7 @@ function LoginContent() {
             type="password"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
-            className="w-full border border-gray-500 placeholder-gray-600 p-3 rounded-md outline-none focus:ring-2 focus:ring-blue-500"
+            className="w-full border border-gray-500 p-3 text-gray-900 placeholder-gray-500 bg-white rounded-md outline-none focus:ring-2 focus:ring-blue-500"
             placeholder="Enter your password"
           />
         </div>
@@ -156,7 +156,7 @@ function LoginContent() {
           {loading ? "Logging in..." : "Login"}
         </button>
 
-        <p className="text-center text-xs text-gray-600 mt-6">
+        <p className="text-center text-xs text-gray-700 mt-6">
           &copy; {new Date().getFullYear()} • Internal use only • Authorized staff access
         </p>
 

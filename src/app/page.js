@@ -78,7 +78,10 @@ export default function Home() {
           </div>
 
           {/* Dropdown */}
-          <div className="mb-4 relative" ref={dropdownRef}>
+          <div
+                onClick={() => setOpen(!open)}
+                className="w-full bg-white border border-gray-400 rounded-md p-3 flex justify-between items-center cursor-pointer hover:border-blue-500 focus:ring-2 focus:ring-blue-400 transition shadow-sm"
+          >
             <label className="block mb-2 text-sm font-medium text-gray-700">Department</label>
             <div
               onClick={() => setOpen(!open)}
