@@ -73,18 +73,20 @@ export default function Home() {
               alt="JOOGAD TECH Logo"
               className="mx-auto mb-4 w-20 h-20 rounded-full"
             />
-            <h2 className="text-2xl font-semibold mb-1">JOOGAD TECH Institute</h2>
-            <p className="text-gray-500 text-sm">Select your department to continue</p>
+            <h2 className="text-2xl font-semibold mb-1 text-gray-900">JOOGAD TECH Institute</h2>
+            <p className="text-sm text-gray-700">Select your department to continue</p>
           </div>
 
           {/* Dropdown */}
           <div className="mb-4 relative" ref={dropdownRef}>
-            <label className="block mb-2 text-sm font-medium">Department</label>
+            <label className="block mb-2 text-sm font-medium text-gray-700">Department</label>
             <div
               onClick={() => setOpen(!open)}
               className="w-full bg-white border border-gray-300 rounded-md p-3 flex justify-between items-center cursor-pointer hover:border-blue-500 transition"
             >
-              <span>{selected || "Choose Department"}</span>
+              <span className={`${selected ? "text-gray-900" : "text-gray-400"}`}>
+                  {selected || "Choose Department"}
+                </span>
               <FaChevronDown className={`transition-transform ${open ? "rotate-180" : ""}`} />
             </div>
 
@@ -113,15 +115,15 @@ export default function Home() {
 
           {/* Divider */}
           <div className="flex items-center my-4">
-            <div className="flex-1 border-t"></div>
-            <span className="px-3 text-gray-400 text-sm">OR</span>
-            <div className="flex-1 border-t"></div>
+            <div className="flex-1 border-t border-gray-700"></div>
+            <span className="px-3 text-gray-700 text-sm">OR</span>
+            <div className="flex-1 border-t border-gray-700"></div>
           </div>
 
           {/* Assessor button */}
           <button
             onClick={() => router.push("/login?role=assessor")}
-            className="w-full border border-gray-300 py-3 rounded-md hover:bg-gray-50 transition cursor-pointer"
+            className="w-full border text-gray-600 border-gray-500 py-3 rounded-md hover:bg-gray-50 transition cursor-pointer"
           >
             Assessor Access
           </button>

@@ -115,7 +115,7 @@ function LoginContent() {
             alt="JOOGAD TECH Institute Logo"
             className="mx-auto mb-4 w-24 h-24 rounded-full"
           />
-          <h2 className="text-2xl font-semibold mb-1">JOOGAD TECH Institute</h2>
+          <h2 className="text-2xl font-semibold mb-1 text-gray-900">JOOGAD TECH Institute</h2>
           {deptName && (
             <p className="text-gray-500 text-sm whitespace-pre-line">
               {`Welcome,\n${deptName}\nLogin`}
@@ -125,23 +125,23 @@ function LoginContent() {
 
         {/* Login Form */}
         <div className="mb-4">
-          <label className="block mb-1 text-sm font-medium">Email</label>
+          <label className="block mb-1 text-sm font-medium text-gray-700">Email</label>
           <input
             type="email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
-            className="w-full border border-gray-300 p-3 rounded-md outline-none focus:ring-2 focus:ring-blue-500"
+            className="w-full border border-gray-500 p-3 placeholder-gray-600 rounded-md outline-none focus:ring-2 focus:ring-blue-500"
             placeholder="Enter your email"
           />
         </div>
 
         <div className="mb-6">
-          <label className="block mb-1 text-sm font-medium">Password</label>
+          <label className="block mb-1 text-sm font-medium text-gray-700">Password</label>
           <input
             type="password"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
-            className="w-full border border-gray-300 p-3 rounded-md outline-none focus:ring-2 focus:ring-blue-500"
+            className="w-full border border-gray-500 placeholder-gray-600 p-3 rounded-md outline-none focus:ring-2 focus:ring-blue-500"
             placeholder="Enter your password"
           />
         </div>
@@ -149,14 +149,14 @@ function LoginContent() {
         <button
           onClick={handleLogin}
           disabled={loading}
-          className={`w-full py-3 rounded-md text-white transition cursor-pointer ${
+          className={`w-full py-3  rounded-md text-white transition cursor-pointer ${
             loading ? "bg-gray-400" : "bg-blue-600 hover:bg-blue-700"
           }`}
         >
           {loading ? "Logging in..." : "Login"}
         </button>
 
-        <p className="text-center text-xs text-gray-400 mt-6">
+        <p className="text-center text-xs text-gray-600 mt-6">
           &copy; {new Date().getFullYear()} • Internal use only • Authorized staff access
         </p>
 

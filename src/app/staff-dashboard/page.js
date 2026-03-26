@@ -346,21 +346,21 @@ export default function StaffDashboard() {
         {/* TASK SUBMISSION */}
         {activeTab === "tasks" && (
           <div className="bg-white p-6 rounded-xl shadow-sm space-y-4 border border-gray-200 hover:shadow-md transition cursor-pointer">
-            <h2 className="font-bold text-lg mb-2">Submit Task</h2>
+            <h2 className="font-bold text-lg mb-2 text-gray-900">Submit Task</h2>
 
             <input
               type="text"
               placeholder="Title"
               value={title}
               onChange={e => setTitle(e.target.value)}
-              className="w-full p-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-400 outline-none"
+              className="w-full p-3 border border-gray-500 placeholder-gray-500 rounded-xl focus:ring-2 focus:ring-blue-400 outline-none"
             />
 
             <textarea
               placeholder="Description"
               value={description}
               onChange={e => setDescription(e.target.value)}
-              className="w-full p-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-400 outline-none"
+              className="w-full p-3 border border-gray-500 placeholder-gray-500 rounded-xl focus:ring-2 focus:ring-blue-400 outline-none"
             />
 
             <input
@@ -368,10 +368,10 @@ export default function StaffDashboard() {
               placeholder="Link (optional)"
               value={link}
               onChange={e => setLink(e.target.value)}
-              className="w-full p-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-400 outline-none"
+              className="w-full p-3 border border-gray-500 placeholder-gray-500 rounded-xl focus:ring-2 focus:ring-blue-400 outline-none"
             />
 
-            <label className="block w-full p-3 border border-gray-300 rounded-xl cursor-pointer text-gray-700 hover:bg-gray-50 transition">
+            <label className="block w-full p-3 border border-gray-500 rounded-xl cursor-pointer text-gray-700 hover:bg-gray-50 transition">
               {fileName || "Upload File (Max 3MB)"}
               <input
                 type="file"
@@ -414,7 +414,7 @@ export default function StaffDashboard() {
         {/* MY SUBMISSIONS */}
         {activeTab === "submissions" && (
           <div>
-            <h2 className="font-bold text-xl mb-4">My Submissions ({submissions.length})</h2>
+            <h2 className="font-bold text-xl mb-4 text-gray-900">My Submissions ({submissions.length})</h2>
             {submissions.map(sub => (
               <div key={sub._id} className="bg-white p-4 rounded-xl border border-gray-200 shadow-sm flex justify-between mb-3 hover:shadow-md transition">
                 <div>
@@ -440,7 +440,7 @@ export default function StaffDashboard() {
        {/* VERIFICATION */}
 {activeTab === "verification" && (
   <div className="bg-white p-6 rounded-xl shadow-sm space-y-4 border border-gray-200 hover:shadow-md transition">
-    <h2 className="font-bold text-lg">Account Verification</h2>
+    <h2 className="font-bold text-lg text-gray-900">Account Verification</h2>
     <p className="text-sm">{verificationStatus}</p>
 
     <label className="block w-full p-3 border border-gray-300 rounded-xl cursor-pointer text-gray-700 hover:bg-gray-50 transition">
