@@ -100,7 +100,7 @@ export default function Home() {
                   <div
                     key={idx}
                     onClick={() => handleSelect(dept)}
-                    className="p-3 cursor-pointer hover:bg-blue-100 transition"
+                    className="p-3 cursor-pointer text-gray-900 hover:bg-blue-100 hover:text-blue-700 transition"
                   >
                     {dept.name}
                   </div>
@@ -127,7 +127,7 @@ export default function Home() {
           {/* Assessor button */}
           <button
             onClick={() => router.push("/login?role=assessor")}
-            className="w-full border text-gray-600 border-gray-500 py-3 rounded-md hover:bg-gray-50 transition cursor-pointer"
+            className="w-full border text-gray-600 border-gray-500 py-3 rounded-md hover:border-blue-500 focus:ring-2 focus:ring-blue-400 transition shadow-sm hover:shadow-md cursor-pointer"
           >
             Assessor Access
           </button>
