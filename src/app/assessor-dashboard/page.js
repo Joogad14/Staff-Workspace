@@ -120,7 +120,7 @@ export default function AssessorDashboard() {
   };
 
   return (
-    <div className="min-h-screen bg-gray-50 p-6">
+    <div className="min-h-screen bg-gray-50 p-6 text-gray-900">
 
       {/* POPUP */}
       {successMessage && (
@@ -139,7 +139,7 @@ export default function AssessorDashboard() {
           <h2 className="font-bold text-xl">
             Welcome, {assessor?.name || "Assessor"}
           </h2>
-          <p className="text-sm text-gray-500">Manage staff activities</p>
+          <p className="text-sm text-gray-700">Manage staff activities</p>
         </div>
 
         <button
@@ -157,7 +157,7 @@ export default function AssessorDashboard() {
           placeholder="Search by name or department..."
           value={filter}
           onChange={e => setFilter(e.target.value)}
-          className="w-full max-w-lg p-3 rounded-xl border border-gray-200 focus:border-blue-400 focus:ring-2 focus:ring-blue-200 outline-none transition"
+          className="w-full max-w-lg p-3 rounded-xl border border-gray-300 text-gray-900 placeholder-gray-500 bg-white focus:border-blue-400 focus:ring-2 focus:ring-blue-200 outline-none transition"
         />
       </div>
 
@@ -243,7 +243,7 @@ export default function AssessorDashboard() {
                             max={100}
                             defaultValue={task.grade ?? ""}
                             id={`grade-${user._id}-${task._id}`}
-                            className="p-2 rounded-xl w-20 border border-gray-200 focus:border-blue-400 focus:ring-2 focus:ring-blue-200 outline-none"
+                            className="p-2 rounded-xl w-20 border border-gray-300 text-gray-900 bg-white focus:border-blue-400 focus:ring-2 focus:ring-blue-200 outline-none"
                           />
 
                           <button
